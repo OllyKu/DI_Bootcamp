@@ -1,0 +1,70 @@
+html{
+    background-color: gainsboro;
+}
+body{
+    margin: auto;
+}
+
+button{
+    display: flex;
+    justify-content: flex-start;
+}
+.back-img{
+    background-image: url(hand-painted-watercolor-pastel-sky-background_23-2148902771.webp);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.col {
+    height:200px;
+    width:31%;
+    margin-left:2.1%;
+    display: inline-block;
+    text-align: center;
+    
+}
+ .col-left {
+        margin-left: 0;
+ }
+
+.icons{
+    margin-top: 50px;
+}
+.icons p{
+    color: grey;
+}
+.back-img p{
+    color: gray;
+    font-size: 50px;
+    border: none;
+}
+i{
+    color: rgba(101, 101, 255, 0.7);
+    font-size: 50px;
+}
+#mail{
+    font-size: 15px;
+    width: 300px;
+    border-radius: 5px;
+    
+ }
+ #button{
+    border-radius: 5px;
+    background-color: rgba(101, 101, 255, 0.7);
+ }
+ button{
+    border-radius: 5px;
+    background-color: rgba(101, 101, 255, 0.7);
+    margin-right: 0px;
+ }
+ header p{
+    width: fit-content;
+    margin: 10px;
+ }
