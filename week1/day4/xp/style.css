@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    
+    font-family: Arial, Helvetica, sans-serif;  
 }
 body{
     background-color: white;
@@ -11,7 +10,6 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-
 }
 .container{
     position: relative;
@@ -27,9 +25,7 @@ body{
  }
  .container .left{
     background-color: gainsboro;
-    padding: 40px;
-    
-    
+    padding: 40px;   
 }
 .container .right{
     background-color: purple;
