@@ -1,0 +1,44 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    
+  }
+body{
+    background-image: url(https://img.freepik.com/free-photo/young-woman-yellow-leather-jacket-copy-space_23-2148674153.jpg?w=2000);
+    
+}
+  .navBar{
+    background-color: black;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    margin:0% 0% 0% 5%;
+    padding: 15px;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline;
+    color: white;
+    padding: 15px;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+    margin-left: 1000px;
+    font-size: 25px;
+  }
+  i{
+    font-size: 25px;
+  }
+  section{
+    display: block;
+    background-color: aliceblue;
+    width: 80%;
+    
+  }
+  

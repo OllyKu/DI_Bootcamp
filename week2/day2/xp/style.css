@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: url(map.webp);
+    background-size: cover;/* Resize the background image to cover the entire container */   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main{
+    background-color: rgba(238, 238, 238, 0.680);   
+    /* width: 100%; */
+    height: 100vh;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 8vw;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+
+}
+.numbers{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    line-height: 35px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 8vw;
+
+}
+.numbers h2{
+    color: rgb(104, 104, 218);
+    font-weight: 900;
+   
+}
+.numbers p{
+    color: rgba(34, 34, 34, 0.886);
+}
+
+.cards{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'Poppins', sans-serif;  
+    margin-top: 30px;
+}
+.one{
+    border-radius: 15px;
+    box-shadow: 0 35px 55px rgba(0,0,0, 0.1);
+    background-color: rgb(253, 253, 253);
+    padding-top: 30px;
+    width: 30%;
+    
+}
+.two{
+   
+    border-radius: 15px;
+    box-shadow: 0 35px 55px rgba(0,0,0, 0.1);
+    background-color: rgb(253, 253, 253);
+    padding-top: 30px;
+    width: 30%;
+    
+
+}
+.three{
+    border-radius: 15px;
+    box-shadow: 0 35px 55px rgba(0,0,0, 0.1);
+    background-color: rgb(253, 253, 253);
+    padding-top: 30px;
+    width: 30%;
+    
+}
+.name{
+    font-weight: bold;
+}
+.comment p{
+    font-size: 12px;
+}
+img{
+    box-shadow: 0 35px 55px rgba(0,0,0, 0.1);
+    border-radius: 55%;
+    width: 4em;
+    height: 4em;
+       
+}
+.cards .image img{
+
+    object-fit: cover;
+}
+ 
+.one .name-profession{
+    background-color: palevioletred;
+}
+.two .name-profession{
+    background-color: rgb(103, 103, 253);
+}
+.three .name-profession{
+    background-color: rgb(83, 238, 238);
+}
