@@ -33,10 +33,7 @@
             </div>
           </div>
         </nav>
-        <!-- Navbar -->
-      
         <!-- Background image -->
-
             <div class="text-center bg-image" id="image">
                 <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
                     <div class="d-flex justify-content-center align-items-center">
@@ -49,20 +46,27 @@
                     </div>
                 </div>
             </div>
-
         <!-- Background image -->
       </header>
       <main>
         <!-- About Me -->
-        <div class="container justify-content-center">
+        <div class="container justify-content-center mb-5" style="height:50vh;">
             <h1 class="text-center text-warning mt-5">About Me</h1>
             <div class="row justify-content-center mt-5" id="aboutMe">
-                <div class="col-3 justify-content-center">
+                <div class="col-3 justify-content-center ">
                     <img src="face2.jpg" alt="icon">
-                    <p class="text-center">Olga Kuskova</p>
+                    <div class="link d-flex justify-content-center mt-2">
+                      <a href="" target="_blank"><i class="fa-brands fa-github text-success fs-1 me-3"></i></a>
+                      <a href="" target="_blank"><i class="fa-brands fa-linkedin text-success fs-1 me-3"></i></a>
+                      <a href="" target="_blank"><i class="fa-brands fa-facebook text-success fs-1"></i></a>
+                    </div>
                 </div>
-                <div class="col-6 border border-5 border-top-0 border-end-0 border-bottom-0 border-success ps-4 pt-3">
-                    <h3 class="text-success">Olga Kuskova</h3>
+                <div class="col-6 border border-5 border-top-0 border-end-0 border-bottom-0 border-success ps-4 pt-3 pb-3 ">
+                    <h3 class="text-success">Hey, My Name is Olga
+                      <br>
+                      I am a Full Stack Developer
+                    </h3>
+                    <br>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure magnam quisquam, esse cum ad deserunt laudantium in nisi illum!
                     Rem vero temporibus corporis necessitatibus magni dicta quas quo quidem minima?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod beatae voluptate dolor totam perferendis, fuga optio officia, 
                     et magni impedit sapiente aliquid voluptates minus tenetur saepe, non quae eveniet maiores.
@@ -98,13 +102,13 @@
         <!-- Blog -->
         <div class="container justify-content-center mt-5" id="blog">
             <h1 class="text-center text-warning mt-5">Blog</h1>
-            <div class="row d-flex justify-content-around mt-5">
+            <div class="row d-flex justify-content-around mt-5 pb-5">
                 <div class="card" style="width: 18rem;">
                     <img src="imag2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Click Here!</a>
+                      <a href="#" class="btn btn-outline-light btn-success">Click Here!</a>
                     </div>
                 </div>
                   <div class="card" style="width: 18rem;">
@@ -112,7 +116,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Click Here!</a>
+                      <a href="#" class="btn btn-outline-light btn-success">Click Here!</a>
                     </div>
                 </div>
                   <div class="card" style="width: 18rem;">
@@ -120,11 +124,41 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Click Here!</a>
+                      <a href="#" class="btn btn-outline-light btn-success">Click Here!</a>
                     </div>
                 </div>
             </div>
         </div>
       </main>
+      <!-- Contact -->
+      <footer>
+        <div class="container">
+           <div class="row justify-content-center mt-5">
+              <div class="col">
+                  <h1 class="text-center text-warning mb-5" >Stay in Touch!</h1>
+                  <div class="link d-flex justify-content-center mt-5">
+                    <a href="" target="_blank"><i class="fa-brands fa-github text-success fs-1 me-3"></i></a>
+                    <a href="" target="_blank"><i class="fa-brands fa-linkedin text-success fs-1 me-3"></i></a>
+                    <a href="" target="_blank"><i class="fa-brands fa-facebook text-success fs-1"></i></a>
+                  </div>
+              </div>
+              <div class="col">
+                <div class="mb-2">
+                  <label for="exampleFormControlInput1" class="form-label"></label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                </div>
+                <div class="mb-2">
+                  <label for="exampleFormControlInput1" class="form-label"></label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-2">
+                  <label for="exampleFormControlTextarea1" class="form-label"></label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-outline-light btn-success mb-3">Message Me</button>
+              </div>
+           </div>
+        </div>
+      </footer>
 </body>
 </html>

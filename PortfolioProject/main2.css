@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-@import url(_animate-extended.scss);
+/* @import url('_animate-extended.scss'); */
 
 html,h1,h2,h3,h4,h5,h6,a{
     font-family: "Raleway";
@@ -26,8 +26,10 @@ body{
     
 }
 #aboutMe{
-    width: fit-content;
+    height: 450px;
+    align-items: center;
     box-shadow: 0 35px 55px rgba(0,0,0, 0.1);
+    
 }
 
 img{
@@ -36,15 +38,8 @@ img{
     height: 250px;
     justify-content: center;
     padding: 20px;
-    margin-left: 30px;
-    
-    
-   
+    margin-left: 30px;  
 }
-
-/* #blog img{
-    border-radius: none;
-} */
 
 .card-img-top{
     border-radius: 0%;
@@ -53,4 +48,6 @@ img{
 
 #Portfolio, #blog{
     box-shadow: 0 35px 55px rgba(0,0,0, 0.1);
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
