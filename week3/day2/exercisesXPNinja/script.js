@@ -44,3 +44,29 @@ console.log(sum);
 //     "I love the movie named Nemo" ➞ "I found Nemo at 5"
 //     "Nemo is a cute fish" ➞ "I found Nemo at 0"
 //     "My fish is called Nemo, I love it" ➞ "I found Nemo at 4"
+    let word = prompt("Give me a sentence with Nemo: ");
+    switch(word){
+        case 'Nemo':
+            console.log("I found Nemo at" + indexOf("Nemo"))
+            break;
+        default:
+            console.log("I can’t find Nemo")
+    }
+    
+
+//   Exercise 4 : Boom
+// Instructions
+// Hint: if statement (tomorrow’s lesson)
+
+// Prompt the user for a number. Depending on the users number you will return a string of the word “Boom”. Follow the rules below:
+
+// If the number given is less than 2 : return “boom”
+// If the number given is bigger than 2 : the string should include n number of “o”s (n being the number given)
+// If the number given is evenly divisible by 2, add a exclamation mark to the end.
+// If the number given is evenly divisible by 5, return the string in ALL CAPS.
+// If the number given is evenly divisible by both 2 and 5, return the string in ALL CAPS and add an exclamation mark to the end.
+// Examples
+// 4 ➞ "Boooom!"
+// // There are 4 "o"s and 4 is divisible by 2 (exclamation mark included)
+// 1 ➞ "boom"
+// // 1 is lower than 2, so we return "boom"
