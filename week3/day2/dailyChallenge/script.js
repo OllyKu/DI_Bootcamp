@@ -25,6 +25,5 @@ console.log(fruits);
 // let moreFruits = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 // Access and then console.log “Oranges”.
 let moreFruits = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
-let Oranges = moreFruits [1][1]
-console.log(Oranges.toString());
+console.log(moreFruits [1][1][0]);
 
