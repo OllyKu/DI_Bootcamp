@@ -26,10 +26,9 @@
         let wordNot =  sentence.indexOf("not")
         let wordBad = sentence.indexOf("bad");
         console.log(wordNot, wordBad);
-        console.log(wordBad);
-
+        
         if(wordNot < wordBad){
-           let a = sentence.slice(wordNot, wordBad);
+           let a = sentence.slice(wordNot, wordBad+3);
             sentence = sentence.replace(a, "good")
             console.log(sentence);
         }else{
