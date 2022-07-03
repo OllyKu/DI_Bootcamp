@@ -16,7 +16,7 @@ console.log(stars);
 
 for(let a=1; a<=6; a++){
     let temp="";
-  for(let b=1; b<=row; b++){
+  for(let b=1; b<=a; b++){
     temp+="*";
 
   }
