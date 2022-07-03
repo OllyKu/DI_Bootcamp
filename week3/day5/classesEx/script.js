@@ -46,3 +46,43 @@ for (let index = 0; index<names.length; index++){
   }
   console.log()
 }
+
+// For/In Loop
+// Loops through the properties of an object. This loop continues until all of the properties of the Object are processed.
+
+// Loops also through the index of an array. This loop continues until all of the elements of the array are processed.
+
+let person = {fname:"John", lname:"Doe", age:25};
+for (let x in person) {
+  console.log(x) //fname lname age
+  console.log(person[x]) // John Doe 25
+}
+
+// Syntax
+
+// for (variable in array)
+//   statement
+let colors = ["blue", "yellow", "red"];
+
+for (let i in colors) {
+   console.log(i); //0 1 2
+   console.log(colors[i]) //blue yellow red
+}
+
+// For/Of Loop
+// Loops through the values of an iterable objects such as Arrays and Strings.
+
+// Careful: an object is not iterable
+
+let colors = ["blue", "yellow", "red"];
+
+for (let i of colors) {
+   console.log(i); // logs blue, yellow, red
+}
+
+
+//for of doesn't work for object
+let person = {fname:"John", lname:"Doe", age:25};
+for (let x of person) {
+  console.log(x) 
+} // Error: object is not iterable
