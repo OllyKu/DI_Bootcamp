@@ -129,9 +129,14 @@ let details = {
   is: 'Rudolf',
   the: 'raindeer'
 }
- for(i in details){
-    console.log(i,details[i])
- }
+let objAsArr = Object.entries(details);
+console.log(objAsArr);
+let toPrint = ''
+for (let index = 0; index<objAsArr.length; index++){
+    const element = objAsArr[index];
+    toPrint += `${element[0]} ${element[1]} `
+}
+console.log(toPrint);
 
 //  Exercise 7 : Secret Group
 // Instructions
