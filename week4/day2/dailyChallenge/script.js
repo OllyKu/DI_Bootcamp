@@ -23,7 +23,7 @@ console.log(wordsArr);
 // The number of stars that wraps the sentence, must depend on the length of the longest word.
 function longestWord(){
     let Word = 0;
-for (let i = 0; i < wordsArr.length; i++) {
+    for (let i = 0; i < wordsArr.length; i++) {
     if (wordsArr[i].length > Word) {
         Word = wordsArr[i].length
     }
@@ -31,4 +31,21 @@ for (let i = 0; i < wordsArr.length; i++) {
 return Word
 }
 
-  console.log(longestWord());
+console.log(longestWord());
+
+function addSpaces(wordsArr,Word){
+    if(wordsArr.length==Word){
+      return "";
+    }
+    return " ".repeat(Word - wordsArr.length);
+  }
+
+function stars(){
+	let Word=longestWord(wordsArr);
+	console.log("*".repeat(Word+4));
+	for(let x in wordsArr){
+		console.log("* "+wordsArr[x]+spaces(words[x],Word)+" *")
+	}
+	console.log("*".repeat(Word+4));
+}
+stars();
