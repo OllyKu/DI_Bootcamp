@@ -67,12 +67,14 @@ calculateTip()
 
 function isDivisible() {
     let sum = 0
+    let allnums =[];
     for(let i= 0; i<= 500; i++){
         if(i%23 == 0){
             console.log(i);
             sum += i;
+            allnums.push(i)
         }
-    }console.log(`This is the sum of numbers ${sum}`);
+    }console.log(sum, allnums);
 }
 isDivisible();
 // Bonus: Add a parameter divisor to the function.
@@ -82,12 +84,14 @@ isDivisible();
 // isDivisible(45) : Console.log all the numbers divisible by 45, and their sum
 function isDivisibleBonus(divisor){
     let sum = 0
-    for(let i= 0; i<= 500; i++){
+    let allnums =[];
+    for(let i= divisor; i<= 500; i++){
         if(i%divisor == 0){
             console.log(i);
             sum += i;
+            allnums.push(i)
         }
-    }console.log(`This is the sum of numbers ${sum}`);
+    }console.log(sum, allnums);
 }
 isDivisibleBonus(3)
 
@@ -223,7 +227,7 @@ console.log(hotelCost())
 function planeRideCost(){
     let destination = prompt("Your destination is : ")
     //destination === ""
-    while(typeof destination == String||destination==null){
+    while (!(typeof destination !== "string"||destination==null)){
         destination = prompt("Your destination is : ")
     }
     switch (destination) {
