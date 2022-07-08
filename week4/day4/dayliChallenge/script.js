@@ -63,10 +63,16 @@ let bottleSong = () =>{
             Take ${circle} down, pass them around
             ${userNum - circle} bottles of beer on the wall`)
             }
+    
         userNum -= circle;
-     }       
+     } 
 
-        console.log(`no bottle of beer on the wall`)
+    if(userNum % 2 ==0 ) {
+        console.log(`     0 bottle of beer on the wall`)
+    } else{
+        console.log(`      no bottle of beer on the wall`)
+    }    
+
       
 } 
     
