@@ -46,27 +46,26 @@
 function playTheGame(){
     let askUser = confirm("would like to play the game ?")
     if(askUser === false){
-        alert("No problem, Goodbye");
-    } else{
-        let userNumber = Number(prompt("Enter a number between 0 and 10"))
-        function checkValidity(num){ //check the validity of the user’s number 
-
-            if(isNaN(num)){
-              alert("Sorry Not a number, Goodbye");// If the user didn’t enter a number (ie. if he entered another data type) alert “Sorry Not a number, Goodbye”.
-            }
-            if(num<0||num>10){
-                alert("Sorry it is not a good number, Goodbye");// If the user didn’t enter a number between 0 and 10 alert “Sorry it’s not a good number, Goodbye”.
-            } else{
-                let computerNumber=Math.floor(Math.random() * (10 + 1)) // create a variable named computerNumber where the value is a random number between 0 and 10 (Hint: Use the built-in Math.random() function).
-                console.log(computerNumber);
-            }
-         }
-        console.log(checkValidity(userNumber));
+       return alert("No problem, Goodbye");
+    } 
+    let userNumber = Number(prompt("Enter a number between 0 and 10"))
+        //check the validity of the user’s number 
+    if(isNaN(userNumber)){
+        alert("Sorry Not a number, Goodbye");// If the user didn’t enter a number (ie. if he entered another data type) alert “Sorry Not a number, Goodbye”.
+    }
+    if(userNumber<0||userNumber>10){
+        alert("Sorry it is not a good number, Goodbye");// If the user didn’t enter a number between 0 and 10 alert “Sorry it’s not a good number, Goodbye”.
+    }          
+    console.log(userNumber);
+    let computerNumber=Math.floor(Math.random() * (10 + 1)) // create a variable named computerNumber where the value is a random number between 0 and 10 (Hint: Use the built-in Math.random() function).
+    console.log(computerNumber);
         // let computerNumber=Math.floor(Math.random() * 10) // create a variable named computerNumber where the value is a random number between 0 and 10 (Hint: Use the built-in Math.random() function).
         // console.log(computerNumber);
-
-    }
+    return [userNumber, computerNumber]
 }
+console.log(playTheGame());
+
+
 function compareNumbers(userNumber,computerNumber){ //create a new function named compareNumbers(userNumber,computerNumber) that takes 2 parameters : userNumber and computerNumber
  let guess = 3
  while(userNumber!=computerNumber && guess!=0){
@@ -85,3 +84,4 @@ function compareNumbers(userNumber,computerNumber){ //create a new function name
     }
  }
 }
+compareNumbers(playTheGame())
