@@ -36,7 +36,7 @@ document.getElementsByClassName('Pluto')[0].style.backgroundColor = "#c780e8";
 // Bonus: Do the same process to create the moons.
 // Be careful, each planet has a certain amount of moons. How should you display them?
 // Should you still use an array for the planets ? Or an array of objects ?
-let moons = { Mercury: 0, Venus: 0, Earth: 1, Mars: 2, Jupiter: 53, Saturn: 53, Uranus: 27, Neptune: 14 }
+let moons = { Mercury: 0, Venus: 0, Earth: 1, Mars: 2, Jupiter: 53, Saturn: 53, Uranus: 27, Neptune: 14, Pluto: 6 }
 
 Object.keys(moons).forEach(num => {
     if (moons[num] > 0) {
