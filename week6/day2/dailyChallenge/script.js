@@ -40,4 +40,7 @@ const gameInfo = [
      
    //   let winners = ["becky", "susy"]
    
-   let winners = gameInfo.forEach (({ usernames}, {score })=>  score > 5 ? console.log(usernames) : null);
+  //  let winners = gameInfo.forEach (({ usernames}, {score })=>  score > 5 ? console.log(usernames) : 0);
+   let winners = gameInfo.forEach (e =>  e.score > 5 ? console.log(e.username) : 0);
+   let totalScore = 0
+   gameInfo.forEach( e => console.log(totalScore+= e.score))
