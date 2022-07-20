@@ -8,16 +8,42 @@ function generate_table() {
 };
 generate_table();
 
-let body = document.getElementsByTagName("body")[0];
-let colorsSideBar = document.querySelectorAll("#sidebar > *");
-let colorsMainTable = document.querySelectorAll("#maintable > *");
+let canvas = document.getElementsByClassName('table')
 let btn = document.getElementsByTagName("button")[0];
 
 btn.addEventListener("click", function(){
-    for ( block of colorsMainTable){
-        block.style.backgroundColor = "white";
+    for (let i = 0; i < canvas.length; i++) {
+        canvas[i].style.backgroundColor = `white`
     }
 });
 
+let body = document.getElementsByTagName("body")[0];
+let colorsSideBar = document.querySelectorAll("#sidebar > *");
 let color = null;
 let mousedown = false;
+
+body.addEventListener("mousedown", function(){
+    mousedown = true;
+})
+
+body.addEventListener("mouseup", function(){ 
+    mousedown = false;
+})
+
+
+for (element of colorsSideBar){
+    element.addEventListener("click", function(event){
+        color = event.target.style.backgroundColor;
+    });
+}
+
+let colorsMainTable = document.querySelectorAll(".maintable > *");
+
+for (elenemt of colorsMainTable){
+    elenemt.addEventListener("mousedown", function(event){
+        if (color != null) event.target.style.backgroundColor = color;
+    });
+    elenemt.addEventListener("mouseover", function(event){
+        if (mousedown && color != null) event.target.style.backgroundColor = color;
+    });
+}
