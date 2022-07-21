@@ -1,66 +1,49 @@
-let arrayColors = ["#4b5bdc", "#0cd36d", "#250662", "#cb5bea", "#228916", "#ac3e1b", "#df514a", "#539397", "#880977", "#f697c1", "#ba96ce", "#679c9d","#63b598", "#ce7d78", "#ea9e70", "#a48a9e", "#c6e1e8", "#648177" ,"#0d5ac1" , "#f205e6" ,"#1c0365"];
-// you can use an array rgba colors or hex colors
+function generate_table() {
+    let div = document.getElementsByClassName("maintable")[0];
+    for (let i = 0; i < 1680; i++) {
+        let canvas = document.createElement('div')
+        canvas.setAttribute('class', 'table')
+        div.appendChild(canvas)
+    };
+};
+generate_table();
 
+let canvas = document.getElementsByClassName('table')
+let btn = document.getElementsByTagName("button")[0];
 
-function addColors (){
-	let palletSection = document.getElementById("pallet")
-	for(let color of arrayColors){
-		let divColor = document.createElement("div");
-		divColor.style.backgroundColor = color;
-		palletSection.appendChild(divColor);
-		divColor.addEventListener("click", pickColor)
-	}
-}
-
-
-addColors()
-
-function addGrid () {
-	let height= 40;
-	let width= 40;
-	let gridPaintSection = document.getElementById("gridPaint");
-	for (let i = 0; i<height*width; i++){
-		let divColor = document.createElement("div");
-		gridPaintSection.appendChild(divColor);
-		divColor.addEventListener("mousedown",draw);
-		divColor.addEventListener("mousemove",continueDrawing);
-		divColor.addEventListener("mouseup",stop);
-	}
-
-}
-
-addGrid()
-
-let colorPicked;
-let isDrawing=false;
-
-function pickColor(evt){
-	colorPicked = evt.target.style.backgroundColor;
-	console.log(colorPicked);
-
-}
-function draw(){
-	 isDrawing=true;
-}
-function continueDrawing(evt){
-	if(isDrawing==true){
-	 evt.target.style.backgroundColor=colorPicked;
-	}
-}
-function mouseup(){
-    if(isDrawing==true){
-
+btn.addEventListener("click", function(){
+    for (let i = 0; i < canvas.length; i++) {
+        canvas[i].style.backgroundColor = `white`
     }
-    isDrawing=false;
+});
+
+let body = document.getElementsByTagName("body")[0];
+let colorsSideBar = document.querySelectorAll("#sidebar > *");
+let color = null;
+let mousedown = false;
+
+body.addEventListener("mousedown", function(){
+    mousedown = true;
+})
+
+body.addEventListener("mouseup", function(){ 
+    mousedown = false;
+})
+
+
+for (element of colorsSideBar){
+    element.addEventListener("click", function(event){
+        color = event.target.style.backgroundColor;
+    });
 }
 
-let clearBtn=document.getElementById("clearbtn");
-clearBtn.addEventListener("click",clearGrid);
+let colorsMainTable = document.querySelectorAll(".maintable > *");
 
-function clearGrid(){
-let gridPaintSection = document.getElementById("gridPaint");
-let grid=gridPaintSection.childNodes;
-for(let g of grid){
-     g.style.backgroundColor="white";
-  }
+for (elenemt of colorsMainTable){
+    elenemt.addEventListener("mousedown", function(event){
+        if (color != null) event.target.style.backgroundColor = color;
+    });
+    elenemt.addEventListener("mouseover", function(event){
+        if (mousedown && color != null) event.target.style.backgroundColor = color;
+    });
 }
