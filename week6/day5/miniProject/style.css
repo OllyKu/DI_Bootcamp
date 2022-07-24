@@ -1,0 +1,86 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+body {
+    background-color: rgb(25, 11, 40);
+}
+#big {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#box {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 800px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    justify-content: space-between;
+}
+.but {
+    width: 150px;     
+    height: 50px;
+    text-align: center;
+    margin: 26px;
+    border-radius: 30px;
+    font-size: 20px;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+.but:hover {
+    background-color: lightsalmon;
+}
+#btn-box {
+    display: flex;
+    flex-direction: row;
+}
+#header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#text {
+    padding: 0px 25px;
+}
+#words {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#name {
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace; 
+}
+#form-box {
+    width: 100%;
+    text-align: center;
+    margin: 30px;
+    font-size: 40px;
+}
+input {
+    width: 400px;
+    height: 25px;
+}
+#btn-form {
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+    background-color: blanchedalmond;
+}
+.h1 {
+    font-size: 50px;
+}
+#search {
+    width: 100%;
+}
+#search-btn {
+    width: 8%;
+    height: 40px;
+    font-size: 19px;
+}
