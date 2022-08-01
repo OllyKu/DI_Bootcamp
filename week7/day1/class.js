@@ -15,7 +15,7 @@
 //     return arr
 // }
 
-// //map method
+                                                            // //map method
 // let arr1 = [1, 2, 3, 4];
 // let newArr1 = arr1.map((item, i) =>{
 //     return item > 2
@@ -29,7 +29,7 @@
 // });
 // console.log(userMail);
 
-//filter method how to do without filter mothod
+                                        //filter method how to do without filter mothod
 // let num = [0, 1, 2, 3, 4, 5]
 // const allNum = (item) => {
 //     let newArr = [];
@@ -64,7 +64,7 @@
 //     return item['age'] > 26
 //   });
 
-//reduce
+                                                        //reduce
 // const num = [2, 5, 10, 100]
 
 // const numSum = ((arr) => {
@@ -100,7 +100,7 @@
 // }
 // console.log(digits(789));
 
-//clone an array
+                                        //clone an array
 // let arr = [1, 2, 3, 4];
 // let arr2 = [...arr];
 
@@ -110,7 +110,7 @@
 // console.log(arr2);
 
 
-//destructing
+                                        //destructing
 
 // const a = arr[0];
 // const b = arr[1];
@@ -120,7 +120,7 @@
 // const [a,b,c,d] = arr;
 // console.log(a,b);
 
-//spread operator
+                                        //spread operator
 
 // let arr1 = [5, 6, 7];
 // let arr3 = [2,...arr1, 9, ...arr]
@@ -132,10 +132,10 @@
 // nums([5, 6, 7])
 
 
-//rest operator
+                                        //rest operator
 //
 
-//try catch errors in code
+                                        //try catch errors in code
 
 //this code will not work, because of second console.log, i is not defined
 // for(let i = 0; i<6; i++){
