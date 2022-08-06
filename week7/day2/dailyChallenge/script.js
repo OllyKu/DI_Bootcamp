@@ -16,13 +16,10 @@ let inventory = [
 // Hint : Find an array method that returns the value of the first element in an array that pass a test.
 
 const getCarHonda = carInventory => { 
-  
     const hondaCar = carInventory.find( car => car.car_make === "Honda" );
-  
     return `This is a ${hondaCar.car_make} ${hondaCar.car_model} from ${hondaCar.car_year}`;
-  }
-          
-  console.log( getCarHonda(inventory) );
+  }          
+  console.log( getCarHonda(inventory));
 
 /* Part II
 
@@ -34,6 +31,6 @@ Use the cars inventory below: */
 
 const sortCarInventoryByYear = (carInventory) =>{
     let clonedArray =  [...carInventory];
-    return clonedArray.sort((a , b) => {a.car_year - b.car_year}) // descending order
+    return clonedArray.sort((a , b) => {a.car_year - b.car_year}) // sort numbers in ascending order
 }
 console.log(sortCarInventoryByYear(inventory)); // RETURN NEW SORTED ARRAY
