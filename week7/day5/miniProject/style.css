@@ -1,0 +1,47 @@
+html, body{
+
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+
+    font-family: 'Orbitron', sans-serif;
+    color: antiquewhite;
+}
+
+h6{
+
+    color: antiquewhite;
+}
+
+#mainSection{
+
+    background-image: url('card-pattern.png');
+    background-color: #43289b;
+    background-attachment: fixed;
+    min-height:100vh;
+}
+
+.inlineBlockDisplay{
+
+    display: inline-block;
+    margin: 20px;
+}
+
+input#searchingInput{
+
+  background-color: gainsboro;
+  width: 700px;
+}
+
+.backgroundStyle2{
+
+    background-image: url('circuit-pattern.png');
+    background-color: #764B8E;
+}
+
+.robotImg{
+
+    border-radius: 50%;
+}
