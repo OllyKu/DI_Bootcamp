@@ -8,62 +8,59 @@ Allow the user to delete a specific gif by clicking the DELETE button.
 Allow the user to remove all of the GIFs by clicking a DELETE ALL button.
 
 */
-function displayGif() {
-    let search = document.querySelector("#search");
-    let add = document.querySelector("#submit");
-    let deleteAll = document.querySelector("#deleteall");
-    let gif = new XMLHttpRequest();
-    gif.open(
-      "GET",
-      `https://api.giphy.com/v1/gifs/search?q=hilarious&limit=25&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`
-    );
-    gif.responseType = "json";
-    gif.send();
-    gif.onload = function () {
-      if (gif.status != 200) {
-        console.log("error status");
-      } else {
-        console.log("Finished Loading");
-        console.log(gif.response);
-        attach(gif.response);
-      }
-    };
-    function attach() {
-      add.addEventListener("click", addgif);
-      deleteAll.addEventListener("click", deletegifs); // adds event listeners to our two buttons
-    }
-  
-    function deletegifs() {
-      let container = document.querySelector(".container");
-      container.innerHTML = ""; // empties the container, basically removes all gifs and buttons
-    }
-  
-    function addgif(e) {
-      console.log(gif.response);
-      gif.open(
-        "GET",
-        `https://api.giphy.com/v1/gifs/search?q=${search.value}&limit=50&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`
-      );
-      gif.send();
-      gif.onload = function () {
-        let container = document.querySelector(".container");
-        let img = document.createElement("img");
-        let xbtn = document.createElement("button");
-        xbtn.setAttribute("type", "button");
-        xbtn.innerText = "X";
-        xbtn.addEventListener("click", x);
-        container.append(xbtn);
-        img.setAttribute(
-          "src",
-          gif.response.data[Math.floor(Math.random() * 51)].images.downsized.url // randomizes the gifs
-        );
-        container.append(img);
-        function x() {
-          // Removes the button and gif
-          img.remove();
-          xbtn.remove();
-        }
-      };
-    }
+// https://api.giphy.com/v1/gifs/search?q=sun&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My
+let xhr = new XMLHttpRequest();
+const API_KEY = 'hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My';
+
+let root = document.getElementById('root');
+
+xhr.onload = function(){
+  if(xhr.status != 200){
+    alert(`Error ${xhr.status} - ${xhr.statusText}`)
   }
-  displayGif();
+  else {
+    showImg(xhr.response.data);
+  }
+}
+
+document.getElementById('myForm').addEventListener('submit',function(event){
+  event.preventDefault()
+  submitForm();
+})
+
+document.getElementById('erase').addEventListener('click',function(){
+  root.innerHTML = ''
+})
+
+
+function submitForm(){
+  const input = document.getElementById('search').value;
+  let url = `https://api.giphy.com/v1/gifs/search?q=${input}&rating=g&api_key=${API_KEY}&limit=1&offset=${getRandom()}`;
+  xhr.open('GET',url);
+  xhr.responseType = 'json';
+  xhr.send();
+}
+
+function getRandom(num = 50){
+  return Math.floor(Math.random()*50)
+}
+
+function showImg(arr) {
+  let div = document.createElement('div');
+  let img = document.createElement('img');
+  let btn = document.createElement('button');
+
+  div.style.display = 'inline-block';
+
+  img.setAttribute('src', arr[0].images.fixed_width.url);
+  img.style.width = '120px';
+  div.appendChild(img);
+
+  btn.textContent = 'X';
+  btn.addEventListener('click', function(){
+    root.removeChild(div);
+  })
+  div.appendChild(btn);
+
+  root.appendChild(div)
+}
