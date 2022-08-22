@@ -35,6 +35,23 @@ const func = () => {
 
 func()
 */
- let obj ={
+//  let obj ={
     
- }
+//  }
+
+// await
+/*
+function getToken() {
+  return new Promise(x => {
+    window.localStorage.getItem("token")
+  });
+}
+
+async function case1() {
+  var x = await getToken();
+  console.log(x)
+}
+
+case1();
+
+*/
