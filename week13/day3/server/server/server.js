@@ -2,12 +2,14 @@ const express = require('express');
 const cors = require('cors');
 const {products} = require('./modules/data.js');
 
+dotenv.config();
+
 const app = express();
 app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-app.listen(5000, ()=>{
+app.listen(process.env.PORT||8080, ()=>{
   console.log('run on port 5000');
 })
 
